@@ -5,22 +5,14 @@ OBJ = ./obj
 SRC = ./src
 
 all:
-	gcc -c $(SRC)/Hour.c -I $(INCLUDE) -o $(OBJ)/Hour.o
-	gcc -c $(SRC)/Date.c -I $(INCLUDE) -o $(OBJ)/Date.o
-	gcc -c $(SRC)/Appointment.c -I $(INCLUDE) -o $(OBJ)/Appointment.o
-	gcc -c $(SRC)/appointmentlist.c -I $(INCLUDE) -o $(OBJ)/appointmentlist.o
-	gcc -c $(SRC)/teacher.c -I $(INCLUDE) -o $(OBJ)/teacher.o
-	gcc -c $(SRC)/schedule.c -I $(INCLUDE) -o $(OBJ)/schedule.o
-	gcc -c $(SRC)/listSchedule.c -I $(INCLUDE) -o $(OBJ)/listSchedule.o
-	gcc -c $(SRC)/HandlesFiles.c -I $(INCLUDE) -o $(OBJ)/HandlesFiles.o
-	gcc $(APP)/main.c $(OBJ)/*.o -I $(INCLUDE) -o $(BIN)/main 
-	gcc $(APP)/main.c $(OBJ)/*.o -I $(INCLUDE) -o $(BIN)/main.exe
+	gcc -c $(SRC)/frame.c -I $(INCLUDE) -o $(OBJ)/frame.o
+	gcc $(APP)/main.c $(OBJ)/*.o -I $(INCLUDE) -o $(BIN)/main
 
-teste:
-	gcc $(APP)/teste.c $(OBJ)/*.o -I $(INCLUDE) -o $(BIN)/teste
+test:
+	gcc $(APP)/test.c $(OBJ)/*.o -I $(INCLUDE) -o $(BIN)/test
 
-runTeste:
-	$(BIN)/teste
+runTest:
+	$(BIN)/test
 
 run:
 	$(BIN)/main
