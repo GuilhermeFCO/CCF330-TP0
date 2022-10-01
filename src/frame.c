@@ -241,7 +241,6 @@ void especial() {
 		}
 		printFrame(f);
 	} while (continuar());
-	printFrame(f);
 }
 
 int getN() {
