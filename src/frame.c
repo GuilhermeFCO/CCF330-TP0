@@ -181,57 +181,57 @@ void especial() {
 		f = newFrame();
 		for (int i = 0; i < n; i++)	{
 			getCord(cord);
-			cont = 1;
+			cont = 0;
 			while (f->frame[cord[0]][cord[1]] != ' ') getCord(cord);
-			f->frame[cord[0]][cord[1]] = '*';
+			// f->frame[cord[0]][cord[1]] = '*';
 			aux = rand() % 8;
 			switch (aux)
 			{
 			case 0:
 				while (f->frame[cord[0]+cont][cord[1]+cont] == ' ' && cont < 11) {
-					f->frame[cord[0]+cont][cord[1]+cont] = '*';
+					f->frame[cord[0]+cont][cord[1]+cont] = '\\';
 					cont++;
 				}				
 				break;
 			case 1:
 				while (f->frame[cord[0]-cont][cord[1]+cont] == ' ' && cont < 11) {
-					f->frame[cord[0]-cont][cord[1]+cont] = '*';
+					f->frame[cord[0]-cont][cord[1]+cont] = '/';
 					cont++;
 				}				
 				break;
 			case 2:
 				while (f->frame[cord[0]-cont][cord[1]-cont] == ' ' && cont < 11) {
-					f->frame[cord[0]-cont][cord[1]-cont] = '*';
+					f->frame[cord[0]-cont][cord[1]-cont] = '\\';
 					cont++;
 				}				
 				break;
 			case 3:
 				while (f->frame[cord[0]+cont][cord[1]-cont] == ' ' && cont < 11) {
-					f->frame[cord[0]+cont][cord[1]-cont] = '*';
+					f->frame[cord[0]+cont][cord[1]-cont] = '/';
 					cont++;
 				}				
 				break;
 			case 4:
 				while (f->frame[cord[0]+cont][cord[1]] == ' ' && cont < 11) {
-					f->frame[cord[0]+cont][cord[1]] = '*';
+					f->frame[cord[0]+cont][cord[1]] = '|';
 					cont++;
 				}				
 				break;
 			case 5:
 				while (f->frame[cord[0]-cont][cord[1]] == ' ' && cont < 11) {
-					f->frame[cord[0]-cont][cord[1]] = '*';
+					f->frame[cord[0]-cont][cord[1]] = '|';
 					cont++;
 				}				
 				break;			
 			case 6:
 				while (f->frame[cord[0]][cord[1]+cont] == ' ' && cont < 11) {
-					f->frame[cord[0]][cord[1]+cont] = '*';
+					f->frame[cord[0]][cord[1]+cont] = '-';
 					cont++;
 				}				
 				break;
 			case 7:
 				while (f->frame[cord[0]][cord[1]-cont] == ' ' && cont < 11) {
-					f->frame[cord[0]][cord[1]-cont] = '*';
+					f->frame[cord[0]][cord[1]-cont] = '-';
 					cont++;
 				}				
 				break;

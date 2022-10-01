@@ -9,7 +9,7 @@ int main() {
 }
 
 int Menu() {
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n----------- Bem Vindo ao gerador de Pinturas NFT -----------\n");
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n----------- Bem Vindo ao gerador de Obras de Arte NFT -----------\n");
 	printf("1: *\n");
 	printf("2: +\n");
 	printf("3: X\n");
